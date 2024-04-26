@@ -34,6 +34,10 @@ window/stretch/mode="viewport"
 window/stretch/aspect="keep_width"
 window/handheld/orientation=1
 
+[dotnet]
+
+project/assembly_name="Match 3 Wild West"
+
 [filesystem]
 
 import/blender/enabled=false

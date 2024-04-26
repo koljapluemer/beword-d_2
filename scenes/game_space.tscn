@@ -222,9 +222,10 @@ stretch_mode = 0
 
 [node name="Grid" type="Node2D" parent="."]
 script = ExtResource("2_511gf")
-width = 8
+width = 4
 height = 12
-offset = 64
+piece_width = 128
+piece_height = 64
 y_offset = 6
 revolver_sound = ExtResource("13_xur8m")
 explosion_sound = ExtResource("14_n6np5")

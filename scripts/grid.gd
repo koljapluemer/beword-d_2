@@ -13,7 +13,8 @@ var move_checked = false
 # Grid variables
 @export var width: int
 @export var height: int
-@export var offset: int
+@export var piece_width: int
+@export var piece_height: int
 @export var y_offset: int
 var x_start = 64
 var y_start = 42 + 256
@@ -124,13 +125,13 @@ func match_at(i, j, color):
 				return true
 
 func grid_to_pixel(column, row):
-	var new_x = x_start + (offset * column)
-	var new_y = y_start + (offset * row)
+	var new_x = x_start + (piece_width * column)
+	var new_y = y_start + (piece_height * row)
 	return Vector2(new_x, new_y)
 
 func pixel_to_grid(pos):
-	var column = round((pos.x - x_start) / offset)
-	var row = round((pos.y - y_start) / offset)
+	var column = round((pos.x - x_start) / piece_width)
+	var row = round((pos.y - y_start) / piece_height)
 	return Vector2(max(0, min(width-1, column)), max(0, min(height-1, row)))
 
 func is_in_grid(pos):
